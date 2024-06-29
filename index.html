@@ -4,31 +4,69 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <link rel="stylesheet" href="./src/style.css">
+  <link rel="stylesheet" href="./src/style.scss">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite + TS + Alpine</title>
+  <script type="module" src="/src/index.ts" defer></script>
+  <title>Elmir K</title>
 </head>
 
 <body>
-  <div id="app" x-data="app">
-    <div>
-      <a href="https://vitejs.dev" target="_blank">
-        <img src="./public/vite.svg" class="logo" alt="Vite logo" />
-      </a>
-      <a href="https://www.typescriptlang.org/" target="_blank">
-        <img src="./public/typescript.svg" class="logo vanilla" alt="TypeScript logo" />
-      </a>
+  <div class="app">
+    <header class="header">
+      <div class="buttons-container">
+        <button class="toggle-button" @click="toggleTheme()"> ☀️ </button>
+        <button class="toggle-button" @click="toggleLanguage()"><span> 🌐 </span></button>
+      </div>
+      <nav class="navbar">
+        <a href="#">home</a>
+        <a href="#about">about</a>
+        <a href="#experience">experience</a>
+        <a href="#projects">projects</a>
+        <a href="#contact">contact</a>
+        <div class="line"></div>
+      </nav>
+      <div class="socials">
+        <a href="https://github.com/" target="_blank">
+          <img src="/github.svg" class="icon" alt="github logo">
+        </a>
+        <a href="https://telegram.org/" target="_blank">
+          <img src="/telegram.svg" class="icon" alt="telegram logo">
+        </a>
+      </div>
+    </header>
+    <div class="container">
+      <main class="main">
+        <section id="home">
+          <div class="block">
+            <p>Hi, my name is</p>
+            <h1>Elmir K.</h1>
+            <h2>Fullstack developer from Norway!</h2>
+          </div>
+        </section>
+        <section id="about">
+          <h2>About</h2>
+          <div class="block"></div>
+        </section>
+        <section id="experience">
+          <h2>Experience</h2>
+          <div class="block"></div>
+        </section>
+        <section id="projects">
+          <h2>Projects</h2>
+          <div class="block"></div>
+        </section>
+        <section id="contact">
+          <h2>Contact</h2>
+          <div class="block"></div>
+        </section>
+      </main>
+      <footer>
+        <p>
+          elmirkhalilov.dev@gmail.com © Elmir Khalilov. All Rights Reserved.
+        </p>
+      </footer>
     </div>
-    <h1>Vite + TypeScript</h1>
-    <div class="card" x-data="{ count: 0 }">
-      <button id="counter" type="button" x-on:click="count++">Count</button>
-      <span x-text="count"></span>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
   </div>
-  <script type="module" src="/src/index.ts"></script>
 </body>
 
 </html>
